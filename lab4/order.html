@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предзаказ — Кофейня «Аромат»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип кофейни «Аромат»" class="logo__img">
+                <span class="logo__text">Кофейня «Аромат»</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="menu.html" class="nav__link">Меню</a>
+                <a href="order.html" class="nav__link nav__link--active">Заказ</a>
+                <a href="about.html" class="nav__link">О нас</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1>Предзаказ кофе</h1>
+                <p class="intro__subtitle">Заполните форму и нажмите «Отправить заказ».
+                   После отправки откройте консоль браузера (клавиша F12) — там появится
+                   отформатированный вывод объекта с вашими данными.</p>
+
+                <!-- ФОРМА ПРЕДЗАКАЗА: 7 разных типов полей + кнопка отправки.
+                     Обработчик события submit живёт в js/main.js -->
+                <form class="form" id="order-form">
+
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">1. Данные гостя</legend>
+
+                        <div class="form__field">
+                            <label class="form__label" for="name">Ваше имя *</label>
+                            <!-- ТИП 1: type="text" — обычный текст -->
+                            <input class="form__input" type="text" id="name" name="name"
+                                   placeholder="Например, Иван" minlength="2" required>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="phone">Телефон *</label>
+                            <!-- ТИП 2: type="tel" — телефон -->
+                            <input class="form__input" type="tel" id="phone" name="phone"
+                                   placeholder="+7 (900) 123-45-67" required>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="email">E-mail</label>
+                            <!-- ТИП 3: type="email" — браузер сам проверит, что введён адрес с @ -->
+                            <input class="form__input" type="email" id="email" name="email"
+                                   placeholder="ivan@example.ru">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">2. Заказ</legend>
+
+                        <div class="form__field">
+                            <label class="form__label" for="drink">Напиток *</label>
+                            <!-- ТИП 4: select — выпадающий список -->
+                            <select class="form__select" id="drink" name="drink" required>
+                                <option value="" selected disabled>— выберите напиток —</option>
+                                <option value="Эспрессо">Эспрессо — 120 ₽</option>
+                                <option value="Американо">Американо — 140 ₽</option>
+                                <option value="Капучино">Капучино — 180 ₽</option>
+                                <option value="Латте">Латте — 190 ₽</option>
+                                <option value="Флэт уайт">Флэт уайт — 210 ₽</option>
+                                <option value="Раф «Солёная карамель»">Раф «Солёная карамель» — 240 ₽</option>
+                            </select>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="quantity">Количество, шт. *</label>
+                            <!-- ТИП 5: type="number" — только числа, минимум 1, максимум 20 -->
+                            <input class="form__input" type="number" id="quantity" name="quantity"
+                                   min="1" max="20" value="1" required>
+                        </div>
+
+                        <div class="form__field">
+                            <span class="form__label">Как получить заказ? *</span>
+                            <!-- ТИП 6: radio — можно выбрать только один вариант из группы -->
+                            <label class="form__radio-label">
+                                <input class="form__radio" type="radio" name="delivery" value="Самовывоз" required>
+                                Самовывоз
+                            </label>
+                            <label class="form__radio-label">
+                                <input class="form__radio" type="radio" name="delivery" value="Доставка курьером">
+                                Доставка курьером
+                            </label>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="comment">Комментарий</label>
+                            <!-- ТИП 7: textarea — многострочное текстовое поле -->
+                            <textarea class="form__textarea" id="comment" name="comment" rows="3"
+                                      placeholder="Например: без сахара, заберу после 18:00"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form__field">
+                        <!-- ТИП 8: checkbox — галочка согласия, без неё браузер не даст отправить форму -->
+                        <label class="form__checkbox-label">
+                            <input class="form__checkbox" type="checkbox" name="consent" required>
+                            Согласен(на) на обработку персональных данных *
+                        </label>
+                    </div>
+
+                    <!-- Кнопка отправки данных на сервер: type="submit" -->
+                    <button class="button button--submit" type="submit">Отправить заказ</button>
+                </form>
+
+                <!-- Плашка «Заказ принят». Атрибут hidden прячет её,
+                     JavaScript покажет: successBlock.hidden = false -->
+                <div class="success" id="order-success" hidden>
+                    Заказ принят! Данные заказа выведены в консоль браузера — нажмите F12.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Кофейня «Аромат». <span class="footer__muted">Все права защищены.</span></p>
+        </div>
+    </footer>
+
+    <!-- Скрипт подключён ТОЛЬКО на этой странице: он работает с формой -->
+    <script src="js/main.js"></script>
+</body>
+</html>

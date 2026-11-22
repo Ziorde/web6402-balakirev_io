@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — Кофейня «Аромат»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип кофейни «Аромат»" class="logo__img">
+                <span class="logo__text">Кофейня «Аромат»</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="menu.html" class="nav__link nav__link--active">Меню</a>
+                <a href="order.html" class="nav__link">Заказ</a>
+                <a href="about.html" class="nav__link">О нас</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1>Меню</h1>
+                <p class="intro__subtitle">Цены указаны в рублях. Приходите попробовать!</p>
+
+                <!-- СТРАНИЦА СВЁРСТАНА С ПОМОЩЬЮ GRID:
+                     две колонки, категория «напитки» занимает обе колонки сразу -->
+                <div class="menu__layout">
+
+                    <section class="menu__category menu__category--wide">
+                        <h2 class="menu__heading">Кофейные напитки</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Название</th>
+                                    <th>Описание</th>
+                                    <th>Объём</th>
+                                    <th>Цена, ₽</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table__cell table__cell--center">1</td>
+                                    <td class="table__cell">Эспрессо</td>
+                                    <td class="table__cell">Классический чёрный кофе из зёрен средней обжарки</td>
+                                    <td class="table__cell table__cell--center">30 мл</td>
+                                    <td class="table__cell table__cell--right table__price">120</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">2</td>
+                                    <td class="table__cell">Американо</td>
+                                    <td class="table__cell">Эспрессо с добавлением горячей воды</td>
+                                    <td class="table__cell table__cell--center">150 мл</td>
+                                    <td class="table__cell table__cell--right table__price">140</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">3</td>
+                                    <td class="table__cell">Капучино</td>
+                                    <td class="table__cell">Эспрессо с нежной молочной пенкой</td>
+                                    <td class="table__cell table__cell--center">200 мл</td>
+                                    <td class="table__cell table__cell--right table__price">180</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">4</td>
+                                    <td class="table__cell">Латте</td>
+                                    <td class="table__cell">Молочный кофе с лёгкой кофейной горчинкой</td>
+                                    <td class="table__cell table__cell--center">250 мл</td>
+                                    <td class="table__cell table__cell--right table__price">190</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">5</td>
+                                    <td class="table__cell">Флэт уайт</td>
+                                    <td class="table__cell">Двойной эспрессо с бархатным молоком</td>
+                                    <td class="table__cell table__cell--center">180 мл</td>
+                                    <td class="table__cell table__cell--right table__price">210</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">6</td>
+                                    <td class="table__cell">Раф «Солёная карамель»</td>
+                                    <td class="table__cell">Наш фирменный напиток — <strong>хит продаж</strong></td>
+                                    <td class="table__cell table__cell--center">300 мл</td>
+                                    <td class="table__cell table__cell--right table__price">240</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="menu__category">
+                        <h2 class="menu__heading">Десерты</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Название</th>
+                                    <th>Описание</th>
+                                    <th>Вес</th>
+                                    <th>Цена, ₽</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table__cell table__cell--center">1</td>
+                                    <td class="table__cell">Чизкейк «Нью-Йорк»</td>
+                                    <td class="table__cell">Классический сливочный чизкейк</td>
+                                    <td class="table__cell table__cell--center">150 г</td>
+                                    <td class="table__cell table__cell--right table__price">220</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">2</td>
+                                    <td class="table__cell">Круассан с миндалём</td>
+                                    <td class="table__cell">Хрустящий круассан с миндальным кремом</td>
+                                    <td class="table__cell table__cell--center">90 г</td>
+                                    <td class="table__cell table__cell--right table__price">150</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">3</td>
+                                    <td class="table__cell">Эклер</td>
+                                    <td class="table__cell">Заварное пирожное с ванильным кремом</td>
+                                    <td class="table__cell table__cell--center">80 г</td>
+                                    <td class="table__cell table__cell--right table__price">130</td>
+                                </tr>
+                                <tr>
+                                    <td class="table__cell table__cell--center">4</td>
+                                    <td class="table__cell">Паровка</td>
+                                    <td class="table__cell">Нежная сосиска на булочке с соусами и сыром</td>
+                                    <td class="table__cell table__cell--center">120 г</td>
+                                    <td class="table__cell table__cell--right table__price">150</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="menu__category">
+                        <h2 class="menu__heading">Коротко о главном</h2>
+                        <p><strong>Хит продаж</strong> — раф «Солёная карамель»: солёная карамель,
+                           сливки и двойной эспрессо.</p>
+                        <p>По пятницам — <span class="accent">скидка 10 % на все десерты</span>.</p>
+                        <p>Каждое утро собственная ростерия обжаривает свежую партию зёрен.</p>
+                        <a href="order.html" class="button">Заказать кофе</a>
+                    </section>
+
+                    <p class="menu__note">Внимание: десерты могут содержать орехи, глютен
+                       и молочные продукты.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Кофейня «Аромат». <span class="footer__muted">Все права защищены.</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

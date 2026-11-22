@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня «Аромат» — главная</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип кофейни «Аромат»" class="logo__img">
+                <span class="logo__text">Кофейня «Аромат»</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link nav__link--active">Главная</a>
+                <a href="menu.html" class="nav__link">Меню</a>
+                <a href="order.html" class="nav__link">Заказ</a>
+                <a href="about.html" class="nav__link">О нас</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ГЛАВНЫЙ БАННЕР: градиент + анимация пара над чашкой -->
+        <section class="hero">
+            <div class="container hero__content">
+                <div class="hero__cup">
+                    <img src="images/cup.png" alt="Чашка кофе" class="hero__cup-img">
+                    <!-- Пар рисуется тремя <span> и анимируется CSS-ключевыми кадрами @keyframes steam-rise -->
+                    <div class="steam" aria-hidden="true">
+                        <span class="steam__puff steam__puff--1"></span>
+                        <span class="steam__puff steam__puff--2"></span>
+                        <span class="steam__puff steam__puff--3"></span>
+                    </div>
+                </div>
+                <h1 class="hero__title">Лучший кофе в городе</h1>
+                <p class="hero__text">Мы сами обжариваем зёрна и варим кофе с любовью.<br>
+                   <strong>Заходите на чашечку!</strong></p>
+                <a href="menu.html" class="button button--hero">Посмотреть меню</a>
+            </div>
+        </section>
+
+        <!-- ТРИ КАРТОЧКИ В ОДИН РЯД — это FLEXBOX  -->
+        <section class="features">
+            <div class="container features__row">
+                <div class="card">
+                    <h3 class="card__title">Свежая обжарка</h3>
+                    <p class="card__text">Зёрна обжариваем каждую неделю <em>маленькими партиями</em>.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">Уютная атмосфера</h3>
+                    <p class="card__text">Мягкий свет, тихая музыка и запах <em>свежемолотого кофе</em>.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">Домашние десерты</h3>
+                    <p class="card__text">Чизкейки и круассаны <em>по домашним рецептам</em>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>Кто мы</h2>
+                <!-- ФОТО СЛЕВА, ТЕКСТ СПРАВА — тоже FLEXBOX -->
+                <div class="about">
+                    <img src="images/barista.png" alt="Бариста за работой" class="about__img">
+                    <div class="about__body">
+                        <p>«Аромат» — небольшая семейная кофейня в центре города. Мы открылись
+                           в 2026 году и с тех пор варим для гостей
+                           <span class="accent">более 200 чашек кофе</span> каждый день.</p>
+                        <p>В меню — классический эспрессо, капучино, авторские напитки и свежие
+                           десерты. <a href="about.html">Узнайте больше о нас</a> или сразу
+                           <a href="order.html">закажите кофе онлайн</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Кофейня «Аромат». <span class="footer__muted">Все права защищены.</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
